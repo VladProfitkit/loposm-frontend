@@ -1,0 +1,45 @@
+.search-form {
+  position: relative;
+}
+
+.search-form__input {
+  @include transition(border-color);
+  width: 310px;
+  height: 28px;
+  padding: 4px 30px 4px 6px;
+  border: 2px solid #cbcbcb;
+  border-radius: 3px;
+
+  &:hover {
+    border-color: darken(#cbcbcb, 15%);
+  }
+
+  &:focus {
+    border-color: darken(#cbcbcb, 25%);
+  }
+}
+
+.search-form__submit {
+  @include reset;
+  @include dflex(nowrap, row, center, center);
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  transform: translateY(-50%);
+  outline: none;
+  cursor: pointer;
+
+  & path {
+    @include transition(fill);
+    fill: #c6c6c6;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: darken(#c6c6c6, 25%);
+  }
+}

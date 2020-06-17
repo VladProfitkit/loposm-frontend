@@ -1,37 +1,44 @@
-// @font-face {
-//   font-family: "21Cent";
-//   src: local("21Cent"),
-//        local("21Cent Regular"),
-//        local("21Cent-Regular"),
-//        url("../fonts/21Cent.ttf") format("truetype");
-//   font-weight: 400;
-//   font-display: swap;
-// }
-//
-// @font-face {
-//   font-family: "Geometria";
-//   src: local("Geometria-Regular"),
-//        local("Geometria Regular"),
-//        url("../fonts/Geometria.ttf") format("truetype"),
-//        url("../fonts/Geometria.otf") format("opentype");
-//   font-weight: 400;
-//   font-display: swap;
-// }
-//
-// @font-face {
-//   font-family: "Geometria";
-//   src: local("Geometria-Medium"),
-//        local("Geometria Medium"),
-//        url("../fonts/Geometria-Medium.ttf") format("truetype");
-//   font-weight: 500;
-//   font-display: swap;
-// }
-//
-// @font-face {
-//   font-family: "Geometria";
-//   src: local("Geometria-Bold"),
-//        local("Geometria Bold"),
-//        url("../fonts/Geometria-Bold.ttf") format("truetype");
-//   font-weight: 700;
-//   font-display: swap;
-// }
+@font-face {
+  font-family: "MyriadPro";
+  src: local("MyriadPro"),
+       local("MyriadPro Regular"),
+       url("../fonts/MyriadPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MyriadPro";
+  src: local("MyriadPro-Bold"),
+       local("MyriadPro Bold"),
+       url("../fonts/MyriadPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MyriadPro Condenced";
+  src: local("MyriadPro Condenced"),
+       local("MyriadPro-Condenced"),
+       url("../fonts/MyriadPro-Cond.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MyriadPro Condenced";
+  src: local("MyriadPro Bold Condenced"),
+       local("MyriadPro-BoldCondenced"),
+       url("../fonts/MyriadPro-BoldCond.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: local("Roboto Slab Medium"),
+       local("RobotoSlab-Medium"),
+       url("../fonts/RobotoSlab-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}

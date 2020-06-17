@@ -1,0 +1,32 @@
+.main-slider__slides {
+  @include list-reset;
+}
+
+.main-slider__single-slide {
+  width: 100vw;
+  min-height: 480px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $header-footer-color;
+}
+
+.main-slider__slide-container {
+  padding: 262px 77px 0;
+}
+
+.main-slider__slide-heading {
+  @include reset;
+  margin-bottom: 18px;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  font-size: 51.5px;
+  line-height: 46px;
+}
+
+.main-slider__slide-text {
+  @include reset;
+  max-width: 450px;
+  color: #fff;
+}
