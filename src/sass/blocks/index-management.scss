@@ -1,0 +1,108 @@
+.index-management__list {
+  @include list-reset;
+  @include dflex(nowrap, row, space-between, flex-start);
+  margin-bottom: 45px;
+}
+
+.index-management__person {
+  @include dflex(nowrap, column, flex-start, center);
+  flex-basis: calc(33.3333% - 20px);
+}
+
+.index-management__person-photo {
+  display: block;
+  width: 210px;
+  height: 210px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.index-management__person-info {
+  @include dflex(nowrap, column, flex-start, center);
+}
+
+.index-management__person-name {
+  @include reset;
+  margin-bottom: 10px;
+  color: $text-color-1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16.5px;
+  line-height: 19.5px;
+}
+
+.index-management__person-position {
+  @include reset;
+  max-width: 260px;
+  font-size: 13.4px;
+  line-height: 16.4px;
+  text-align: center;
+}
+
+.index-management__link-all {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: lowercase;
+  color: $text-color-1;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: $md) {
+  .index-management__person-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .index-management__person-position {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $sm) {
+  .index-management__list {
+    flex-direction: column;
+  }
+
+  .index-management__person {
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: auto;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .index-management__person-photo {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .index-management__person-info {
+    width: 250px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $xs) {
+  .index-management__person {
+    flex-direction: column;
+  }
+
+  .index-management__person-photo {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .index-management__person-info {
+    width: 100%;
+  }
+}

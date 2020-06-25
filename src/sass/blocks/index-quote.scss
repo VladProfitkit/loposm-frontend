@@ -1,0 +1,134 @@
+.index-quote {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.index-quote__container {
+  @include dflex(nowrap, row, flex-start, center);
+  padding-right: 90px;
+  padding-left: 100px;
+}
+
+.index-quote__quote {
+  @include reset;
+  padding-top: 8px;
+}
+
+.index-quote__img {
+  flex-shrink: 0;
+  margin-right: 90px;
+}
+
+.index-quote__text {
+  position: relative;
+  margin-bottom: 45px;
+
+  &::before,
+  &::after {
+    @include abs-pseudo;
+    width: 29px;
+    height: 25px;
+    color: #c2c2c2;
+    font-size: 98px;
+    line-height: 124px;
+  }
+
+  &::before {
+    content: "“";
+    top: -35px;
+    left: -55px;
+  }
+
+  &::after {
+    content: "”";
+    right: -40px;
+    bottom: -5px;
+  }
+}
+
+.index-quote__text p {
+  @include reset;
+  font-size: 18.5px;
+  line-height: 28.5px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.index-quote__author {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  font-size: 15px;
+  line-height: 16px;
+  font-style: normal;
+}
+
+.index-quote__author-name {
+  color: $text-color-1;
+}
+
+@media (max-width: $md) {
+  .index-quote {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: $sm) {
+  .index-quote__container {
+    padding: 0 50px;
+  }
+
+  .index-quote__img {
+    margin-right: 50px;
+  }
+
+  .index-quote__text {
+    &::before {
+      top: -30px;
+      left: -35px;
+      font-size: 65px;
+      line-height: 80px;
+    }
+
+    &::after {
+      right: -25px;
+      font-size: 65px;
+      line-height: 80px;
+    }
+  }
+
+  .index-quote__text p {
+    font-size: 15px;
+    line-height: 25px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .index-quote {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .index-quote__container {
+    flex-direction: column;
+    padding: 0 45px;
+  }
+
+  .index-quote__img {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .index-quote__text {
+    &::after {
+      right: -40px;
+    }
+  }
+}
