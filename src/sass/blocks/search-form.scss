@@ -43,3 +43,9 @@
     fill: darken(#c6c6c6, 25%);
   }
 }
+
+@media (max-width: $xs) {
+  .search-form__input {
+    max-width: 300px;
+  }
+}

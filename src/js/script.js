@@ -31,7 +31,55 @@ $(document).ready(function () {
     };
   });
 
+  //мобильное меню:
+  const mobileMenuToggle = $('.header__mobile-menu-toggle');
+  const mobileMenu = $('.header__mobile-nav');
+  const body = $('body');
+  const mobileSubMenuToggles = $('.header__mobile-parent-toggle');
+  const closeMobileMenuBtn = $('.header__mobile-menu-close');
+  const mobileMenuOverlay = $('.header__mobile-menu-overlay');
+  const closeMobileMenu = function () {
+    mobileMenu.removeClass('active');
+    mobileMenu.find('.active').removeClass('active');
+    mobileMenuOverlay.removeClass('active')
+    body.removeClass('modal-open');
+  };
+
+  mobileMenuToggle.click(function (e) {
+    e.preventDefault();
+    mobileMenu.toggleClass('active');
+    mobileMenuOverlay.toggleClass('active');
+    body.toggleClass('modal-open');
+  });
+
+  mobileSubMenuToggles.each(function () {
+    $(this).click(function () {
+      $(this).toggleClass('active');
+      $(this).parent().next().toggleClass('active');
+    });
+  });
+
+  closeMobileMenuBtn.click(function () {
+    closeMobileMenu();
+  });
+
+  mobileMenuOverlay.click(function () {
+    closeMobileMenu();
+  });
 
   //слайдер в шапке:
-  const mainSlider = $('.');
+  const mainSlider = $('.main-slider__slides');
+
+  mainSlider.slick({
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true
+  });
+
+  $(window).resize(function () {
+    if ($(window).width() > 767) {
+      closeMobileMenu();
+    };
+  });
 });
