@@ -1,0 +1,142 @@
+.index-about__container {
+  padding: 0 55px 0 5px;
+}
+
+.index-about__main-info {
+  @include dflex(nowrap, row, flex-start, center);
+}
+
+.index-about__list-block {
+  @include dflex(nowrap, column, center, center);
+  position: relative;
+  flex-basis: 485px;
+  flex-shrink: 0;
+  padding-bottom: 90px;
+
+  &::before {
+    @include abs-pseudo;
+    top: -35px;
+    left: -25px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/bg-map-lenobl.svg");
+  }
+}
+
+.index-about__text-block {
+  padding-bottom: 90px;
+}
+
+.index-about__features-list {
+  @include list-reset;
+}
+
+.index-about__feature {
+  max-width: 290px;
+  font-family: "MyriadPro Condenced";
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $text-color-1;
+
+  &:not(.index-about__feature--highlighted) {
+    position: relative;
+    padding-left: 16px;
+
+    &::before {
+      @include abs-pseudo;
+      top: 50%;
+      left: 0;
+      width: 3px;
+      height: 46px;
+      background-color: $heading-color;
+      transform: translateY(-50%);
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &--highlighted {
+    color: $text-color-2;
+  }
+}
+
+.index-about__text-block p {
+  @include reset;
+
+  &:not(:last-child) {
+    margin-bottom: 21px;
+  }
+}
+
+.info-about__disclaimer {
+  @include reset;
+  position: relative;
+  width: 100%;
+  max-width: 670px;
+  margin: 0 auto;
+  padding-left: 80px;
+  color: rgba(#3e3e3e, .75);
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &::before {
+    @include abs-pseudo;
+    top: 50%;
+    left: 0;
+    width: 59px;
+    height: 59px;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/img-logo-rams.svg");
+  }
+}
+
+@media (max-width: $md) {
+  .index-about__container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .index-about__main-info {
+    flex-direction: column;
+  }
+
+  .index-about__list-block {
+    flex-basis: auto;
+    padding: 0;
+    margin-bottom: 40px;
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .index-about__text-block {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: $sm) {
+  .index-about__container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+
+@media (max-width: $sm) {
+  .info-about__disclaimer {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

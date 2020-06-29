@@ -77,6 +77,47 @@ $(document).ready(function () {
     dots: true
   });
 
+  //слайдер партнеров на главной:
+  const partnersSlider = $('.index-partners__slider');
+
+  partnersSlider.slick({
+    // arrows: true,
+    prevArrow: '<button class="index-partners__slider-btn index-partners__slider-btn--prev"></button>',
+    nextArrow: '<button class="index-partners__slider-btn index-partners__slider-btn--next"></button>',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
+  });
+
   $(window).resize(function () {
     if ($(window).width() > 767) {
       closeMobileMenu();
