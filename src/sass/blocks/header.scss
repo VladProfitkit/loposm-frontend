@@ -340,6 +340,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    outline: none;
   }
 
   .header__mobile-nav {
@@ -410,6 +411,7 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
+    outline: none;
 
     &::after {
       @include transition(transform);

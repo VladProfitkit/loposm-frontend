@@ -23,6 +23,7 @@
   transform: translateY(-50%);
   border: none;
   cursor: pointer;
+  outline: none;
   z-index: 100;
 
   &::after {

@@ -1,23 +1,26 @@
-html, body{
+html, body {
+  max-width: 100vw;
   min-height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 body {
+  max-width: 100vw;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   font-family: "MyriadPro", "Arial", sans-serif;
   color: #000;
   background-color: #fff;
-
-  &.modal-open {
-    // position: fixed;
-    // padding-right: 17px;
-    overflow: hidden;
-  }
+  overflow-x: hidden;
 }
 
 *,
