@@ -73,7 +73,7 @@ $(document).ready(function () {
   mainSlider.slick({
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     dots: true
   });
 
@@ -85,7 +85,7 @@ $(document).ready(function () {
     prevArrow: '<button class="index-partners__slider-btn index-partners__slider-btn--prev"></button>',
     nextArrow: '<button class="index-partners__slider-btn index-partners__slider-btn--next"></button>',
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     dots: false,
     infinite: true,
     slidesToShow: 6,
