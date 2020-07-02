@@ -67,6 +67,12 @@ $(document).ready(function () {
     closeMobileMenu();
   });
 
+  $(window).resize(function () {
+    if ($(window).width() > 767) {
+      closeMobileMenu();
+    };
+  });
+
   //слайдер в шапке:
   const mainSlider = $('.main-slider__slides');
 
@@ -79,15 +85,15 @@ $(document).ready(function () {
 
   //слайдер партнеров на главной:
   const partnersSlider = $('.index-partners__slider');
+  let sliderCount = partnersSlider.children().length;
 
   partnersSlider.slick({
-    // arrows: true,
     prevArrow: '<button class="index-partners__slider-btn index-partners__slider-btn--prev"></button>',
     nextArrow: '<button class="index-partners__slider-btn index-partners__slider-btn--next"></button>',
     autoplay: true,
     autoplaySpeed: 5000,
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 6,
     slidesToScroll: 1,
     responsive: [
@@ -117,10 +123,28 @@ $(document).ready(function () {
       }
     ]
   });
+});
 
-  $(window).resize(function () {
-    if ($(window).width() > 767) {
-      closeMobileMenu();
-    };
-  });
+$(window).on('load resize', function () {
+  //фикс слайдера с партнерами (если все слайды сразу влезли на экран):
+  const partnersSlider = $('.index-partners__slider');
+  let sliderCount = $('.index-partners__slider .slick-slide').length;
+  let slidesToShow;
+  if ($(window).width() <= 480) {
+    slidesToShow = 2;
+  } else if ($(window).width() <= 600) {
+    slidesToShow = 3;
+  } else if ($(window).width() <= 991) {
+    slidesToShow = 4;
+  } else if ($(window).width() <= 1199) {
+    slidesToShow = 5;
+  } else {
+    slidesToShow = 6;
+  };
+
+  if (sliderCount <= slidesToShow) {
+    partnersSlider.addClass('index-partners__slider--all-visible');
+  } else {
+    partnersSlider.removeClass('index-partners__slider--all-visible');
+  };
 });

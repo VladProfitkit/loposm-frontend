@@ -1,3 +1,13 @@
+.index-management--inner .section__heading {
+  margin-bottom: 21px;
+}
+
+.index-management__preamble {
+   @include reset;
+   margin-bottom: 55px;
+   padding-left: 41px;
+}
+
 .index-management__list {
   @include list-reset;
   @include dflex(nowrap, row, space-between, flex-start);
@@ -66,6 +76,10 @@
 }
 
 @media (max-width: $sm) {
+  .index-management__preamble {
+    padding-left: 0;
+  }
+
   .index-management__list {
     flex-direction: column;
   }

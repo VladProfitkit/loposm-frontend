@@ -1,0 +1,45 @@
+.breadcrumbs {
+  margin-top: 13px;
+  margin-left: 42px;
+}
+
+.breadcrumbs__line {
+  @include reset;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.breadcrumbs__link {
+  @include transition(color);
+  font-size: 16px;
+  line-height: 18px;
+  color: #b9b9b9;
+
+  &:not(:last-child) {
+    position: relative;
+    padding-right: 18px;
+
+    &::after {
+      position: absolute;
+      content: ">";
+      top: 50%;
+      right: 3px;
+      color: #b9b9b9;
+      transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      color: $text-color-1;
+    }
+  }
+
+  &:last-child {
+    cursor: default;
+  }
+}
+
+@media (max-width: $sm) {
+  .breadcrumbs {
+    display: none;
+  }
+}

@@ -268,7 +268,11 @@
 
 .header__bottom-line {
   padding-top: 12px;
-  padding-bottom: 30px;
+  padding-bottom: 0;
+
+  &--index {
+    padding-bottom: 30px;
+  }
 }
 
 .header__bottom-container {

@@ -6,6 +6,10 @@
   // margin-left: -10px;
 }
 
+.index-partners__slider--all-visible .slick-list {
+  width: 100%;
+}
+
 .index-partners__item {
   @include dflex(nowrap, row, center, center);
   display: flex !important;
