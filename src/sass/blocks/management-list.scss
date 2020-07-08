@@ -1,0 +1,65 @@
+.management-list__list {
+  @include list-reset;
+  @include dflex(wrap, row, flex-start, flex-start);
+}
+
+.management-list__person {
+  @include dflex(nowrap, row, flex-start, flex-start);
+  flex-basis: 50%;
+  margin-bottom: 52px;
+  padding-left: 40px;
+}
+
+.management-list__person-photo {
+  margin-right: 20px;
+}
+
+.management-list__person-info {
+  padding-top: 23px;
+}
+
+.management-list__person-name {
+  @include reset;
+  margin-bottom: 8px;
+  color: $text-color-1;
+  font-size: 16.5px;
+}
+
+.management-list__person-position {
+  @include reset;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media (max-width: $md) {
+  .management-list__person {
+    margin-bottom: 40px;
+  }
+
+  .management-list__person-photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .management-list__person-info {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: $sm) {
+  .management-list__list {
+    flex-direction: column;
+  }
+
+  .management-list__person {
+    flex-basis: auto;
+    align-items: center;
+    // width: 340px;
+    margin-bottom: 30px;
+    padding-left: 0;
+  }
+
+  .management-list__person br {
+    display: none;
+  }
+}

@@ -107,6 +107,10 @@
 }
 
 @media (max-width: $xs) {
+  .index-management__list {
+    margin-bottom: 0;  
+  }
+
   .index-management__person {
     flex-direction: column;
   }

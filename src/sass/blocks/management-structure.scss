@@ -1,0 +1,23 @@
+.management-structure__img {
+  display: block;
+  max-width: 100%;
+  margin: 80px auto 88px;
+}
+
+@media (max-width: $md) {
+  .management-structure__img {
+    margin: 40px auto 40px;
+  }
+}
+
+@media (max-width: $sm) {
+  .management-structure__img {
+    margin: 35px auto 35px;
+  }
+}
+
+@media (max-width: $xs) {
+  .management-structure__img {
+    margin: 30px auto 30px;
+  }
+}
